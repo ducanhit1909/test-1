@@ -28,9 +28,9 @@ const HotGames: React.FC = () => {
     return (
         <section>
             <div className='flex justify-between my-4'>
-                <h2 className="text-2xl md:text-3xl font-bold mb-5 text-center md:text-left">Hot Game</h2>
+                <h2 className="text-[18px] md:text-[28.13px] font-semibold mb-5 text-center md:text-left">Hot Game</h2>
                 <div className='hidden md:flex'>
-                    <img className="w-6 h-6 cursor-pointer" src="/previous-icon.png" alt="Previous" />
+                    <img className="w-6 h-6 cursor-pointer opacity-50" src="/previous-icon.png" alt="Previous" />
                     <img className="w-6 h-6 cursor-pointer" src="/next-icon.png" alt="Next" />
                 </div>
                 <div className='md:hidden'>
@@ -39,13 +39,13 @@ const HotGames: React.FC = () => {
             </div>
             <div className="hidden md:grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {hotGames.map((game, index) => (
-                    <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <div key={index} className="bg-white overflow-hidden">
                         <img
                             src={game.image}
                             alt={game.title}
-                            className="w-full h-64 object-cover"
+                            className="w-full h-64 object-cover rounded-lg"
                         />
-                        <div className="p-5">
+                        <div className="py-5">
                             <div className="flex items-start space-x-4">
                                 {/* Avatar */}
                                 <img
@@ -55,11 +55,11 @@ const HotGames: React.FC = () => {
                                 />
                                 {/* Game Info */}
                                 <div className="flex-1">
-                                    <div className="text-lg font-bold">{game.title}</div>
-                                    <p className="mt-2 text-gray-600 text-sm md:text-base">{game.description}</p>
+                                    <div className="text-[19.22px] font-semibold leading-[23px] text-left">{game.title}</div>
+                                    <p className="mt-2 text-gray-600 text-sm md:text-[13.67px] line-clamp-2 font-normal leading-[18px] text-left">{game.description}</p>
                                 </div>
                                 <div className="mt-4 text-right">
-                                    <button className="border rounded-lg text-black py-2 px-4 hover:bg-gray-100 transition">
+                                    <button className="border rounded-[3px] text-black py-1 px-6 hover:bg-gray-100 text-[13.78px] font-semibold">
                                         View
                                     </button>
                                 </div>
@@ -85,22 +85,22 @@ const HotGames: React.FC = () => {
                             />
                             {/* Game Info */}
                             <div className="flex-1">
-                                <div className="text-lg font-bold text-white">Tree Of Fortune</div>
-                                <p className="mt-2 text-gray-300 text-sm md:text-base">Legend has it that a farmer was granted a seed from a deity.</p>
+                                <div className="text-[16px] font-semibold text-white">Tree Of Fortune</div>
+                                <p className="mt-2 text-white/50 text-[12px] md:text-base">Legend has it that a farmer was granted a seed from a deity.</p>
                             </div>
                         </div>
                         <div className='flex justify-between my-6'>
                             <div>
-                                <h3 className='text-white'>MEDIUM</h3>
-                                <p className='text-gray-300'>Volatility</p>
+                                <h3 className='text-[14px] font-normal leading-[16px] text-white'>MEDIUM</h3>
+                                <p className='text-[12px] font-normal text-white/50'>Volatility</p>
                             </div>
                             <div>
-                                <h3 className='text-white'>95.01%</h3>
-                                <p className='text-gray-300'>RTP</p>
+                                <h3 className='text-[14px] font-normal leading-[16px] text-white'>95.01%</h3>
+                                <p className='text-[12px] font-normal text-white/50'>RTP</p>
                             </div>
                             <div>
-                                <h3 className='text-white'>x5000</h3>
-                                <p className='text-gray-300'>Maximum Win</p>
+                                <h3 className='text-[14px] font-normal leading-[16px] text-white'>x5000</h3>
+                                <p className='text-[12px] font-normal text-white/50'>Maximum Win</p>
                             </div>
                         </div>
                     </div>

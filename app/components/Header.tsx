@@ -4,7 +4,10 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 
 const Header: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);  // State to manage mobile menu visibility
+  const [isOpen, setIsOpen] = useState(false); // State to manage mobile menu visibility
+  const [activeMenu, setActiveMenu] = useState<string>('GAMES'); // State to track active menu
+
+  const menuItems = ["HOME", "GAMES", "MATCH", "COMPANY", "EVENTS", "PARTNERS"];
 
   return (
     <header className="absolute top-0 left-0 w-full z-10 header-bg opacity-80">
@@ -21,13 +24,18 @@ const Header: React.FC = () => {
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-6 tracking-[0.5px] text-left text-white">
-          <li><a href="#" className="hover:text-blue-500">HOME</a></li>
-          <li><a href="#" className="hover:text-blue-500">GAMES</a></li>
-          <li><a href="#" className="hover:text-blue-500">MATCH</a></li>
-          <li><a href="#" className="hover:text-blue-500">COMPANY</a></li>
-          <li><a href="#" className="hover:text-blue-500">EVENTS</a></li>
-          <li><a href="#" className="hover:text-blue-500">PARTNERS</a></li>
+        <ul className="hidden md:flex space-x-6 text-[15px] font-normal tracking-[0.5px] text-left text-white/50">
+          {menuItems.map((item) => (
+            <li 
+            key={item} 
+            onClick={() => setActiveMenu(item)}
+            className={`${activeMenu === item ? 'text-white border-b-2 border-white mb-[-28px]' : 'text-white/50'}`}
+            >
+              <a href="#">
+                {item}
+              </a>
+            </li>
+          ))}
         </ul>
 
         {/* Mobile Hamburger Icon */}
@@ -43,12 +51,20 @@ const Header: React.FC = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <ul className="md:hidden bg-gray-900 text-white flex flex-col items-center space-y-6 py-4">
-          <li><a href="#" className="hover:text-blue-500">HOME</a></li>
-          <li><a href="#" className="hover:text-blue-500">GAMES</a></li>
-          <li><a href="#" className="hover:text-blue-500">MATCH</a></li>
-          <li><a href="#" className="hover:text-blue-500">COMPANY</a></li>
-          <li><a href="#" className="hover:text-blue-500">EVENTS</a></li>
-          <li><a href="#" className="hover:text-blue-500">PARTNERS</a></li>
+          {menuItems.map((item) => (
+            <li key={item}>
+              <a
+                href="#"
+                onClick={() => {
+                  setActiveMenu(item);
+                  setIsOpen(false); // Optional: Close menu after selecting an item
+                }}
+                className={`${activeMenu === item ? 'text-white' : 'text-white/50'}`}
+              >
+                {item}
+              </a>
+            </li>
+          ))}
         </ul>
       )}
     </header>

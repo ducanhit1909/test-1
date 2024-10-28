@@ -18,13 +18,16 @@ const Dropdown: React.FC = () => {
       <div>
         <button
           type="button"
-          className="inline-flex justify-between w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none"
+          className="inline-flex justify-between w-full rounded-md border border-gray-300 px-4 py-1 bg-white text-[12px] font-semibold leading-[26px] text-left text-gray-700 hover:bg-gray-50 focus:outline-none"
           onClick={toggleDropdown}
         >
           {selectedOption}
-          <svg className="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-          </svg>
+          <div className="flex items-center ml-3">
+            <span className="mr-1 text-[7.97px] font-semibold leading-[26px]">AZ</span>
+            <svg className="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
         </button>
       </div>
 

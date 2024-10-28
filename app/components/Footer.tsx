@@ -5,17 +5,17 @@ import Link from 'next/link';
 
 const Footer: React.FC = () => {
     return (
-        <footer className="mt-4 py-10 border-t bg-gray-50">
-            <div className="hidden max-w-6xl mx-auto px-4 md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <footer className="mt-4 py-10 border-t">
+            <div className="hidden w-full max-w-7xl mx-auto px-4 md:flex justify-between">
                 {/* Logo Column */}
-                <div className="flex flex-col items-start">
+                <div className="flex flex-col items-start w-[30%]">
                     <div className="w-20">
                         <Image src="/logo-footer.png" alt="Logo" width={50} height={100} />
                     </div>
-                    <p className="text-lg font-normal leading-7 text-left text-gray-400 my-2">Valletta Buildings, South Street, <br />
+                    <p className="text-[11.81px] font-normal leading-5 text-left text-gray-400 my-2">Valletta Buildings, South Street, <br />
                         Valletta - VLT 1103 Malta</p>
                     {/* Social Icons */}
-                    <div className="flex space-x-3 py-4">
+                    <div className="flex space-x-3 py-6">
                         <a href="#" aria-label="Twitter"><Image src="/twitter-icon.png" alt="Logo" width={30} height={30} /></a>
                         <a href="#" aria-label="Facebook"><Image src="/youtube-icon.png" alt="Logo" width={30} height={30} /></a>
                         <a href="#" aria-label="LinkedIn"><Image src="/linkedin-icon.png" alt="Logo" width={30} height={30} /></a>
@@ -24,12 +24,12 @@ const Footer: React.FC = () => {
 
                 {/* Web Map Column */}
                 <div>
-                    <h5 className="font-semibold mb-2">WEB MAP</h5>
+                    <h5 className="text-[13.23px] font-semibold leading-[14px] text-left text-black mb-2">WEB MAP</h5>
                     <ul>
                         {['Home', 'Games ', 'News', 'Math', 'Company', 'Events', 'Partners'].map((item) => (
                             <li key={item}>
                                 <Link href={`/${item.toLowerCase()}`} legacyBehavior>
-                                    <a className="leading-6 text-gray-400 hover:text-gray-900">{item}</a>
+                                    <a className="text-gray-400 text-[11.81px] font-normal leading-[12px] text-left">{item}</a>
                                 </Link>
                             </li>
                         ))}
@@ -38,12 +38,12 @@ const Footer: React.FC = () => {
 
                 {/* About Us Column */}
                 <div>
-                    <h5 className="font-semibold mb-2">ABOUT US</h5>
+                    <h5 className="text-[13.23px] font-semibold leading-[14px] text-left text-black mb-2">ABOUT US</h5>
                     <ul>
                         {['Licensing', 'Certification', 'Responsible Gaming', 'Exhibitions', 'Copyright Protection', 'Privacy Policy'].map((item) => (
                             <li key={item}>
                                 <Link href={`/${item.toLowerCase().replace(' ', '-')}`} legacyBehavior>
-                                    <a className="leading-6 text-gray-400 hover:text-gray-900">{item}</a>
+                                    <a className="text-gray-400 text-[11.81px] font-normal leading-[12px] text-left">{item}</a>
                                 </Link>
                             </li>
                         ))}
@@ -52,12 +52,12 @@ const Footer: React.FC = () => {
 
                 {/* Events Column */}
                 <div>
-                    <h5 className="font-semibold mb-2">EVENTS</h5>
+                    <h5 className="text-[13.23px] font-semibold leading-[14px] text-left text-black mb-2">EVENTS</h5>
                     <ul>
                         {['PG ICE 2017', 'PG ICE 2018', 'PG ICE 2019', 'About ICE'].map((item) => (
                             <li key={item}>
                                 <Link href={`/${item.toLowerCase().replace(' ', '-')}`} legacyBehavior>
-                                    <a className="leading-6 text-gray-400 hover:text-gray-900">{item}</a>
+                                    <a className="text-gray-400 text-[11.81px] font-normal leading-[12px] text-left">{item}</a>
                                 </Link>
                             </li>
                         ))}
@@ -66,12 +66,12 @@ const Footer: React.FC = () => {
 
                 {/* OUR PARTNERS Column */}
                 <div>
-                    <h5 className="font-semibold mb-2">OUR PARTNERS</h5>
+                    <h5 className="text-[13.23px] font-semibold leading-[14px] text-left text-black mb-2">OUR PARTNERS</h5>
                     <ul>
                         {['Relax Gaming', 'Leander Games'].map((item) => (
                             <li key={item}>
                                 <Link href={`/${item.toLowerCase().replace(' ', '-')}`} legacyBehavior>
-                                    <a className="leading-6 text-gray-400 hover:text-gray-900">{item}</a>
+                                    <a className="text-gray-400 text-[11.81px] font-normal leading-[12px] text-left">{item}</a>
                                 </Link>
                             </li>
                         ))}
@@ -79,38 +79,38 @@ const Footer: React.FC = () => {
                 </div>
             </div>
             {/* Footer Bottom */}
-            <div className="hidden max-w-6xl mx-auto my-10 pt-6 md:flex flex-col md:flex-row justify-between border-t border-gray-200">
-                <p className="text-center md:text-left text-gray-400">COPYRIGHT © 2015-2024 ALL RIGHTS RESERVED.</p>
+            <div className="hidden max-w-7xl mx-auto my-10 pt-6 md:flex flex-col md:flex-row justify-between border-t border-gray-200">
+                <p className="text-[11.06px] text-center md:text-left text-gray-400 ml-4">COPYRIGHT © 2015-2024 ALL RIGHTS RESERVED.</p>
             </div>
 
             <div className='md:hidden m-4'>
                 <div className='flex justify-between border-b pb-8'>
-                    <h3>WEB MAP</h3>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
+                    <h3 className='text-[13.23px] font-semibold'>WEB MAP</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" />
                     </svg>
                 </div>
                 <div className='flex justify-between border-b py-8'>
-                    <h3>ABOUT US</h3>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
+                    <h3 className='text-[13.23px] font-semibold'>ABOUT US</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" />
                     </svg>
                 </div>
                 <div className='flex justify-between border-b py-8'>
-                    <h3>EVENTS</h3>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
+                    <h3 className='text-[13.23px] font-semibold'>EVENTS</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" />
                     </svg>
                 </div>
                 <div className='flex justify-between border-b py-8'>
-                    <h3>OUR PARTNERS</h3>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
+                    <h3 className='text-[13.23px] font-semibold'>OUR PARTNERS</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" />
                     </svg>
                 </div>
                 <div className='py-8 text-gray-400'>
-                    <p>Valletta Buildings, South Street, Valletta - VLT 1103 Malta</p>
-                    <p className='py-4'>COPYRIGHT © 2015-2024 ALL RIGHTS RESERVED.</p>
+                    <p className='text-[11.44px] font-normal'>Valletta Buildings, South Street, Valletta - VLT 1103 Malta</p>
+                    <p className='py-4 text-[11.06px] font-normal'>COPYRIGHT © 2015-2024 ALL RIGHTS RESERVED.</p>
                     <div className="flex space-x-3 py-4">
                         <a href="#" aria-label="Twitter"><Image src="/twitter-icon.png" alt="Logo" width={30} height={30} /></a>
                         <a href="#" aria-label="Facebook"><Image src="/youtube-icon.png" alt="Logo" width={30} height={30} /></a>

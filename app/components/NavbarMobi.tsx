@@ -2,28 +2,26 @@ import React from 'react';
 
 const NavbarMobi: React.FC = () => {
   return (
-    <div className="md:hidden flex justify-between border-b px-2">
+    <div className="md:hidden flex justify-between border-b">
       <div className="flex flex-col items-center mr-2 py-4">
-        <img className="w-8 h-8 object-cover" src="/home-icon.png" alt="Category Icon" />
-        HOME
+        <img className="w-6 h-6" src="/home-page-icon.png" alt="Category Icon" />
+        <span className='text-[10px] font-semibold leading-[10px] text-center text-gray-300 mt-2'>HOME</span>
       </div>
       <div className="flex flex-col items-center mr-1 py-4">
-        <img className="w-8 h-8 object-cove" src="/timeline-icon.png" alt="Category Icon" />
-        TIMELINE
+        <img className="w-6 h-6" src="/timeline-icon.png" alt="Category Icon" />
+        <span className='text-[10px] font-semibold leading-[10px] text-center text-gray-300 mt-2'>TIMELINE</span>        
       </div>
       <div className="flex flex-col items-center mr-1 text-center py-4">
-        <img className="w-8 h-8 object-cover" src="/all-game-icon.png" alt="Category Icon" />
-        ALL GAMES
+        <img className="w-6 h-6" src="/all-game-icon.png" alt="Category Icon" />
+        <span className='text-[10px] font-semibold leading-[10px] text-center mt-2'>ALL GAMES</span>        
       </div>
       <div className="flex flex-col items-center mr-2 py-4">
-        <svg className="w-8 h-8 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-4.35-4.35m1.35-5.65a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-        </svg>
-        SEARCH
+        <img className="w-6 h-6" src="/search-icon.png" alt="Category Icon" />
+        <span className='text-[10px] font-semibold leading-[10px] text-center text-gray-300 mt-2'>SEARCH</span>        
       </div>
       <div className="flex flex-col items-center border-l pl-2 py-4">
-        <img className="w-8 h-8 object-cover" src="/filter-icon.png" alt="Category Icon" />
-        FILTER
+        <img className="w-6 h-6" src="/filter-icon.png" alt="Category Icon" />
+        <span className='text-[10px] font-semibold leading-[10px] text-center text-gray-300 mt-2'>FILTER</span>        
       </div>
     </div>
   );
